@@ -11,3 +11,11 @@ display(dbutils.fs.ls('dbfs:/databricks-datasets/'))  -- This command is used to
 display(dbutils.fs.ls('dbfs:/FileStore/'))    -- This command is used to show file system in table format.
 
 display(dbutils.fs.ls('dbfs:/FileStore/shared_uploads/vinith9598@gmail.com/'))   -- This command is used to show file system in table format.
+
+
+
+
+Create table using csv in databricks :
+
+drop table if exists EmployeeData;
+create table EmployeeData using csv options (path "dbfs:/FileStore/shared_uploads/vinith9598@gmail.com/EmployeeData.csv", header "true")
