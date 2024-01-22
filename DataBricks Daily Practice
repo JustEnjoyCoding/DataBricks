@@ -12,6 +12,20 @@ display(dbutils.fs.ls('dbfs:/FileStore/'))    -- This command is used to show fi
 
 display(dbutils.fs.ls('dbfs:/FileStore/shared_uploads/vinith9598@gmail.com/'))   -- This command is used to show file system in table format.
 
+dbutils.fs.head('dbfs:/FileStore/shared_uploads/DemoTest/EMPLOYEEcopy.xlsx')  -- This command is used to read file. 
+
+dbutils.fs.mkdirs('dbfs:/FileStore/shared_uploads/Append') -- This command is used to create directory.
+
+dbutils.fs.rm('dbfs:/FileStore/shared_uploads/Append') -- This command is used to rmemove directory or file
+
+dbutils.fs.mv('dbfs:/FileStore/shared_uploads/vinith9598@gmail.com/EMPLOYEE.xlsx','dbfs:/FileStore/shared_uploads/DemoTest/')
+             -- This command is used to move file from destignation to source
+
+dbutils.fs.put('dbfs:/FileStore/shared_uploads/DemoTest/Hello12.txt','I love Komal..',True)
+             -- This is used to create new file or update exsting file.
+
+
+
 
 
 
@@ -19,3 +33,5 @@ Create table using csv in databricks :
 
 drop table if exists EmployeeData;
 create table EmployeeData using csv options (path "dbfs:/FileStore/shared_uploads/vinith9598@gmail.com/EmployeeData.csv", header "true")
+
+dbutils.fs.head('dbfs:/FileStore/shared_uploads/DemoTest/EMPLOYEEcopy.xlsx')
