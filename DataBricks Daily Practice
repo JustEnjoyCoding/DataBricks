@@ -40,6 +40,20 @@ dbutils.widgets.text(name='textid',defaultValue='Pune',label='Enter Name:')
 dbutils.widgets.getArgument(name='FruitsDD1', defaultValue='This controler is not exists.')
 
 
+Run Notebook1 from Notebook2 :
+
+Notebook 1 code :
+dbutils.widgets.dropdown(name='ExamDD', defaultValue='English', choices=['English','Marathi','Mahs','Algebra'], label='Select Exam:')
+dbutils.widgets.combobox(name='FruitLS', defaultValue='Apple', choices=['Mango','Apple','Coconut'], label='Select Fruits:')
+print('The selected value of Exam is : ' + dbutils.widgets.get('ExamDD'))
+print('The selected value of Exam is : ' + dbutils.widgets.get('FruitLS'))
+
+Notebook 2 code :
+dbutils.notebook.run('/Users/vinith9598@gmail.com/Notenook1',120, {'ExamDD':'Mahs','FruitLS':'Mango'})
+
+
+
+
 
 
 
