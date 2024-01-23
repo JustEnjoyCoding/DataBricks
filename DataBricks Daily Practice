@@ -25,6 +25,21 @@ dbutils.fs.put('dbfs:/FileStore/shared_uploads/DemoTest/Hello12.txt','I love Kom
              -- This is used to create new file or update exsting file.
 
 
+Databricks widgets command:
+
+dbutils.widgets.help()    -- This command is used to check avilable widgets.
+
+dbutils.widgets.combobox(name='Fruits', defaultValue='Apple', choices=['Apple','Mango','Pineapple','Banana'], label='SelectFruits')
+
+dbutils.widgets.dropdown(name='FruitsDD', defaultValue='Apple', choices=['Apple','Mango','Pineapple','Banana'], label='SelectFruits')
+
+dbutils.widgets.multiselect(name='FruitsMDD', defaultValue='Apple', choices=['Apple','Mango','Pineapple','Banana'], label='SelectFruits')
+
+dbutils.widgets.text(name='textid',defaultValue='Pune',label='Enter Name:')
+
+dbutils.widgets.getArgument(name='FruitsDD1', defaultValue='This controler is not exists.')
+
+
 
 
 
